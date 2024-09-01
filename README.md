@@ -40,4 +40,3 @@
 │   └── svgs
 └── styles
     └── global.css
-```
