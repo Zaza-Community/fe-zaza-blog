@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# fe-zaza-blog
+##### zaza 기술 블로그 front 부분
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### 사용 기술
 
-Currently, two official plugins are available:
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+#### 폴더 구조
+```jsx
+├── utils // 공통 함수
+│   └── calculateTime.ts
+├── types // 공통 타입
+│   └── User.ts
+│   └── TodoItem.ts
+├── constants // 공통 상수
+|   └── buttonNameList.ts
+├── components // 공용 컴포넌트
+│   └── Button  // Button 컴포넌트 관련 요소들
+│       └── Button.tsx // 컴포넌트
+├── api
+│   └── useFetch.ts // api 호출
+├── app
+│   └── (home) // home 도메인
+│       └── layout.tsx // 공통 레이아웃
+│       └── page.tsx   // '/'
+│   └── (mypage) // mypage 도메인
+│       └── mypage //
+│           └── _components // mypage 컴포넌트
+│           └── _utils // mypage 함수
+│           └── _types // mypage 타입
+│           └── _constants // mypage 상수
+│           └── layout.tsx // mypage 레이아웃
+│           └── page.tsx // '/mypage'
+├── tailwind.config.ts // 애니메이션 및 여러군데 공통으로 사용되는 스타일 정의
+├── assets
+│   └── images
+│   └── svgs
+└── styles
+    └── global.css
