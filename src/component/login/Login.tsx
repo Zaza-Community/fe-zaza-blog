@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { BaseSyntheticEvent, useState } from 'react';
 import { LoginReqType } from '../../type/request/loginReqType.ts';
 import { login } from '../../query/queries.ts';
 import { useMutation } from '@tanstack/react-query';
 
 export const Login = () => {
-
   const [loginRequest, setLoginRequest] = useState<LoginReqType>({
     id: '',
     password: '',
@@ -12,10 +11,10 @@ export const Login = () => {
 
   const mutation = useMutation({
     mutationFn: login,
-    onSuccess: (data) => {
+    onSuccess: data => {
       console.log('Login successful:', data);
     },
-    onError: (error) => {
+    onError: error => {
       console.error('Login failed:', error);
     },
   });
@@ -28,7 +27,7 @@ export const Login = () => {
     }
   }
 
-  function handleForm(event) {
+  function handleForm(event: BaseSyntheticEvent) {
     const { name, value } = event.target;
 
     setLoginRequest(prevState => ({
@@ -40,13 +39,7 @@ export const Login = () => {
   return (
     <div>
       <form method={'post'} onSubmit={handleLoginSubmit}>
-        <input
-          type="text"
-          name="id"
-          value={loginRequest.id}
-          onChange={handleForm}
-          placeholder="ID"
-        />
+        <input type="text" name="id" value={loginRequest.id} onChange={handleForm} placeholder="ID" />
         <input
           type="password"
           name="password"
