@@ -8,4 +8,5 @@ export default {
     extend: {},
   },
   plugins: [],
+  important: true, // tailwind 우선순위 조정
 }
