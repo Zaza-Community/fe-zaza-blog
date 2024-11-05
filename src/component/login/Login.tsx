@@ -4,6 +4,14 @@ import { login } from '../../query/queries.ts';
 import { useMutation } from '@tanstack/react-query';
 
 export const Login = () => {
+
+  const onNaverLogin = () => {
+    window.location.href = "http://localhost:8080/oauth2/authorization/naver"
+  }
+  const onGoogleLogin = () => {
+    window.location.href = "http://localhost:8080/oauth2/authorization/google"
+  }
+
   const [loginRequest, setLoginRequest] = useState<LoginReqType>({
     id: '',
     password: '',
@@ -49,6 +57,12 @@ export const Login = () => {
         />
         <button type={'submit'}>login</button>
       </form>
+      <div>
+        <button onClick={onNaverLogin}>NAVER LOGIN</button>
+      </div>
+      <div>
+        <button onClick={onGoogleLogin}>GOOGLE LOGIN</button>
+      </div>
     </div>
   );
 };
