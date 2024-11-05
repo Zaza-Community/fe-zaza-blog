@@ -3,29 +3,34 @@ import searchIcon from '../assets/search.svg';
 import signinIcon from '../assets/signin.svg';
 
 export default function Nav() {
-  return (
-    <>
-      <nav className="flex px-[46px] py-[21px] max-w-[1200px] w-full m-auto">
-        <Link to="/" className="text-[32px]">
-          ZAZA
-        </Link>
-        <div className="flex justify-between flex-1">
-          <div className="flex gap-[25px] ml-[37px] items-end">
-            <Link to="/news">News</Link>
-            <Link to="/tech">Tech</Link>
-            <Link to="community">Community</Link>
-          </div>
-          <div className="flex gap-[25px]">
-            <button>
-              <img src={searchIcon} alt="search-icon" />
-            </button>
-            <button>
-              <img src={signinIcon} alt="signin-icon" />
-            </button>
-          </div>
-        </div>
-      </nav>
-      <Outlet />
-    </>
-  );
+    return (
+        <>
+            <p className="heading center text-3xl">
+                <Link to="/"> ZAZA </Link>
+            </p>
+            <nav role="menu-bar" className="bg-blue-700 flex justify-between flex-1 items-center">
+                <ul role="menu-bar" className="bg-blue-700 text-amber-300">
+                    <li role="menu-item" aria-haspopup="false">
+                        <Link to="/news">News</Link>
+                    </li>
+                    <li role="menu-item" aria-haspopup="false">
+                        <Link to="/tech">Tech</Link>
+                    </li>
+                    <li role="menu-item" aria-haspopup="false">
+                        <Link to="community">Community</Link>
+                    </li>
+                </ul>
+                <div className="flex items-end">
+                    <input aria-label="Example text box" type="text" placeholder="some cool text"/>
+                    <button className="bg-blue-700 btn">
+                        <img src={searchIcon} alt="search-icon"/>
+                    </button>
+                    <button className="bg-blue-700 btn">
+                        <img src={signinIcon} alt="signin-icon"/>
+                    </button>
+                </div>
+            </nav>
+            <Outlet/>
+        </>
+    );
 }
