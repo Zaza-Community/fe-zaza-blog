@@ -6,7 +6,7 @@ import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Community from './pages/Community.tsx';
 import Tech from './pages/Tech.tsx';
-import Nav from './component/Nav.tsx';
+import Nav from './components/Nav.tsx';
 import News from './pages/News.tsx';
 
 const router = createBrowserRouter([

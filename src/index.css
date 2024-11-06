@@ -12,3 +12,33 @@
 :root {
   font-family: 'Pretendard', Arial, sans-serif;
 }
+
+@font-face {
+  font-family: 'BigBlueTerm437NerdFont';
+  src: url("src/fonts/BigBlueTerm437NerdFont-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  font-family: "BigBlueTerm437NerdFont", monospace;
+}
+
+@font-face {
+  font-family: 'GohuFont11NerdFont';
+  src: url("src/fonts/GohuFont11NerdFont-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.content {
+  font-family: "GohuFont11NerdFont", monospace;
+}
+
+button {
+  margin: 5px;
+}
+
+input {
+  margin: 5px;
+}
