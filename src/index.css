@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/*html, body {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
+
 @font-face {
   font-family: 'Pretendard';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -40,5 +45,10 @@ button {
 }
 
 input {
+  margin: 5px;
+}
+
+subtitlebar {
+  padding: 5px;
   margin: 5px;
 }

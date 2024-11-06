@@ -5,8 +5,8 @@ import signinIcon from '../assets/signin.svg';
 export default function NavigateBar() {
     return (
         <>
-            <p className="heading center text-3xl">
-                <Link className="title" to="/"> ZAZA </Link>
+            <p>
+                <Link className="title text-5xl" to="/"> ZAZA </Link>
             </p>
             <nav role="menu-bar" className="bg-blue-700 flex justify-between flex-1 items-center">
                 <ul role="menu-bar" className="bg-blue-700 text-amber-300">
