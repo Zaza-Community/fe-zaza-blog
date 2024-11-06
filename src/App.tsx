@@ -1,6 +1,6 @@
-import Carousel from './component/Carousel';
-import Nav from './component/Nav';
-import SideBar from "./component/SideBar.tsx";
+import Carousel from './components/Carousel';
+import Nav from './components/Nav';
+import SideBar from "./components/SideBar.tsx";
 
 function App() {
     return (
