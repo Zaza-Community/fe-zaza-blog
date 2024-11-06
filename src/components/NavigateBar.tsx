@@ -2,7 +2,7 @@ import { Link, Outlet } from 'react-router-dom';
 import searchIcon from '../assets/search.svg';
 import signinIcon from '../assets/signin.svg';
 
-export default function Nav() {
+export default function NavigateBar() {
     return (
         <>
             <p className="heading center text-3xl">

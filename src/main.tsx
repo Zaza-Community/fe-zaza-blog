@@ -6,7 +6,7 @@ import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Community from './pages/Community.tsx';
 import Tech from './pages/Tech.tsx';
-import Nav from './components/Nav.tsx';
+import NavigateBar from './components/NavigateBar.tsx';
 import News from './pages/News.tsx';
 
 const router = createBrowserRouter([
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    element: <Nav />,
+    element: <NavigateBar />,
     children: [
       {
         path: '/news',

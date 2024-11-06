@@ -1,11 +1,11 @@
 import Carousel from './components/Carousel';
-import Nav from './components/Nav';
+import NavigateBar from './components/NavigateBar.tsx';
 import SideBar from "./components/SideBar.tsx";
 
 function App() {
     return (
         <>
-            <Nav/>
+            <NavigateBar/>
             <div className="flex">
                 <div>
                     <SideBar/>
