@@ -1,15 +1,13 @@
 
-export default function SideBar() {
+export default function LeftSideBar() {
     return (
         <>
-            <aside className="bg-yellow-400">
+            <aside className="bg-yellow-400 w-64">
                 <div className="title-bar">
-                    <button aria-label="Close" className="close"></button>
-                    <h1 className="title">Docs</h1>
-                    <button aria-label="Resize" className="resize"></button>
+                    <h1 className="bg-yellow-400 title">Docs</h1>
                 </div>
                 <div className="separator"></div>
-                <div className="window-pane">
+                <div className="standard-dialog bg-yellow-400 content h-full">
                     <ul className="menu-items">
                         <li><a href="#intro">Intro</a></li>
                         <li>Components
