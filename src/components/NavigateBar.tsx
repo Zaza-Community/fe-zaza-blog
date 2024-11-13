@@ -1,28 +1,30 @@
-import { Link, Outlet } from 'react-router-dom';
-import searchIcon from '../assets/search.svg';
+import { Outlet } from 'react-router-dom';
 import signinIcon from '../assets/signin.svg';
 
 export default function NavigateBar() {
     return (
         <>
-            <p>
-                <Link className="title text-5xl" to="/"> ZAZA </Link>
-            </p>
-            <nav role="menu-bar" className="bg-blue-700 flex justify-between flex-1 items-center">
-                <ul role="menu-bar" className="bg-blue-700 text-amber-300">
-                    <Link className="title" role="menu-item" aria-haspopup="false" to="/news">News</Link>
-                    <Link className="title" role="menu-item" aria-haspopup="false" to="/tech">Tech</Link>
-                    <Link className="title" role="menu-item" aria-haspopup="false" to="community">Community</Link>
+            <nav className="bg-black/20 p-2 rounded border border-[#00ffff]">
+                <ul className="flex items-center justify-between content">
+                    <div className="flex items-center gap-1">
+                        {['Home', 'News', 'Tech', 'Community'].map((item) => (
+                            <li key={item}>
+                                <a
+                                    href="#"
+                                    className="inline-block px-3 py-1 rounded text-[#00ffff] hover:bg-black/30 transition-colors"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </div>
+                    <li>
+                        <button className="px-3 py-1 rounded bg-[#00ffff] text-black hover:bg-[#00ffff]/90 transition-colors flex items-center gap-2">
+                            <img src={signinIcon} alt="signin-icon" className="w-4 h-4"/>
+                            Login
+                        </button>
+                    </li>
                 </ul>
-                <div className="flex items-end">
-                    <input className="content" aria-label="Example text box" type="text" placeholder="some cool text"/>
-                    <button className="bg-blue-700 btn">
-                        <img src={searchIcon} alt="search-icon"/>
-                    </button>
-                    <button className="bg-blue-700 btn">
-                        <img src={signinIcon} alt="signin-icon"/>
-                    </button>
-                </div>
             </nav>
             <Outlet/>
         </>
