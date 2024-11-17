@@ -1,21 +1,27 @@
-import Carousel from './components/Carousel';
-import NavigateBar from './components/NavigateBar.tsx';
-import LeftSideBar from "./components/LeftSideBar.tsx";
-import RightSideBar from "./components/RightSideBar.tsx";
+import NavigateBar from "./components/NavigateBar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
-function App() {
-    return (
-            <div className="h-screen">
-                <NavigateBar/>
-                <div className="flex h-full">
-                    <LeftSideBar/>
-                    <div className="col col-complementary flex flex-1" role="complementary">
-                        <Carousel/>
-                    </div>
-                    <RightSideBar/>
-                </div>
-            </div>
-    );
+export default function App() {
+  return (
+    <div className="flex flex-col min-h-screen bg-[#006666] text-white font-mono">
+      <header>
+        <div className="container mx-auto p-4">
+          <Header />
+          <NavigateBar />
+        </div>
+      </header>
+
+      <div className="container mx-auto p-4 flex-grow">
+        <Outlet />
+      </div>
+
+      <footer>
+        <div className="container mx-auto p-4">
+          <Footer />
+        </div>
+      </footer>
+    </div>
+  );
 }
-
-export default App;
