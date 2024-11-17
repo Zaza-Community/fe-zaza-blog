@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
+import NeonText from './NeonText';
+
 export default function Header() {
     return (
         <div className="flex items-center justify-between mb-4">
-              <div className="text-4xl font-bold tracking-tight title">
-                <span className="text-[#00ffff]">ZAZA</span>
-                <span className="bg-yellow-400 text-black px-2 ml-2">COMMUNITY</span>
-              </div>
+              <Link to="/" className="font-bold tracking-tight">
+                <NeonText />
+              </Link>
               <div className="flex items-center gap-2 content">
                 <select className="bg-black/20 text-[#00ffff] px-2 py-1 rounded border border-[#00ffff]">
                   <option>News</option>

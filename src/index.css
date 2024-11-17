@@ -19,25 +19,25 @@
 }
 
 @font-face {
-  font-family: 'BigBlueTerm437NerdFont';
-  src: url("src/fonts/BigBlueTerm437NerdFont-Regular.ttf");
+  font-family: 'Galmuri9';
+  src: url("src/fonts/Galmuri9.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 .title {
-  font-family: "BigBlueTerm437NerdFont", monospace;
+  font-family: "Galmuri9", monospace;
 }
 
 @font-face {
-  font-family: 'GohuFont11NerdFont';
-  src: url("src/fonts/GohuFont11NerdFont-Regular.ttf");
+  font-family: 'Galmuri7';
+  src: url("src/fonts/Galmuri7.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 .content {
-  font-family: "GohuFont11NerdFont", monospace;
+  font-family: "Galmuri7", monospace;
 }
 
 button {
